@@ -1,0 +1,47 @@
+/*
++----------------------------------------------------------------+
+	Reset CSS					
++----------------------------------------------------------------+
+*/
+body,div,dl,dt,dd,ul,ol,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,textarea,p,blockquote,th,td,address {margin:0; padding:0}
+table {border-collapse:collapse; border-spacing:0; font-size:inherit}
+fieldset, img {border:0}
+a {color:#F05D94; margin:0; padding:0; text-decoration:none}
+
+/*
++----------------------------------------------------------------+
+	Extras														
++----------------------------------------------------------------+
+*/
+.alignleft {float:left}
+.alignright {float:right}
+.clearfix:before, .clearfix:after {content:"\0020"; display:block; height:0; visibility:hidden}
+.clearfix:after {clear:both}
+.clearfix {zoom:1}
+.clear {clear:both}
+
+/*
++----------------------------------------------------------------+
+	Definicoes Gerais														
++----------------------------------------------------------------+
+*/
+body {background:#e3e3e3 url(../img/background.png) no-repeat center top; font:62.5% Georgia, "Times New Roman", Times, serif}
+
+/*
++----------------------------------------------------------------+
+	Container														
++----------------------------------------------------------------+
+*/
+#container {margin:30px auto; width:377px}
+
+/*
++----------------------------------------------------------------+
+	Tweets														
++----------------------------------------------------------------+
+*/
+.item {background:url(../img/bg-tweets.png) no-repeat; height:156px; margin-bottom:15px; padding:40px 30px 0; position:relative}
+.item img {border-radius:5px; float:left; height:48px; margin:10px 12px 0 0; width:48px; -webkit-box-shadow: 0px 0px 7px rgba(38, 38, 38, 0.45); -moz-box-shadow:0px 0px 7px rgba(38, 38, 38, 0.45); box-shadow:0px 0px 7px rgba(38, 38, 38, 0.45)}
+.item p {color:#a8a8a8; font-size:1.4em; font-style:italic; margin-bottom:5px; height:90px; position:relative; text-shadow:1px 0px 0px #fff}
+.item p + p {color:#c0c0c0; font-size:1.2em; height:auto}
+.item p + p:before {background:url(../img/ico-twitter.png) no-repeat; height:15px; content:""; position:absolute; right:0; width:21px}
+.item cite {bottom:0; color:#f05d94; font-size:1.2em; left:60px; position:absolute;}

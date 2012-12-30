@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Tweetbars - Display Tweets with jQuery + Handlebars Template</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div id="container"></div>
+
+<script id="tweets-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <div class="item clearfix">
+        <img src="{{thumb}}" alt="{{author}}">
+        <p>{{tweet}}</p>
+		<p>{{created}}</p>
+		<cite>@{{author}}</cite>
+    </div>
+    {{/each}}
+</script>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.rc.1/handlebars.min.js"></script>
+<script type="text/javascript" src="src/tweets.js"></script>
+</body>
+</html>
