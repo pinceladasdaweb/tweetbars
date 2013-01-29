@@ -42,7 +42,6 @@ var Twitter = {
         
         $.getJSON(this.url, function(data) {
             self.tweets = $.map(data, function(tweet) {
-				console.dir(tweet)
                 return {
                     author: tweet.user.screen_name,
                     tweet: tweet.text,
