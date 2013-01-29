@@ -42,6 +42,7 @@ var Twitter = {
         
         $.getJSON(this.url, function(data) {
             self.tweets = $.map(data, function(tweet) {
+				console.dir(tweet)
                 return {
                     author: tweet.user.screen_name,
                     tweet: tweet.text,
@@ -108,5 +109,5 @@ Twitter.init({
     template: $('#tweets-template').html(),
     container: $('#container'),
     username: 'pinceladasdaweb',
-    count: '10'
+    count: 10
 });

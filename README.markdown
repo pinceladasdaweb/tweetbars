@@ -17,7 +17,7 @@ Display your latest tweets with jQuery + Handlebars.js Template.
     	template: $('#tweets-template').html(),		// The ID of your template
     	container: $('#container'),					// domNode to attach to
     	username: 'pinceladasdaweb',				// Twitter username
-    	count: '10'									// Number of tweets to display
+    	count: 10									// Number of tweets to display
 	});
 ```
 
