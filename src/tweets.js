@@ -27,7 +27,7 @@ Handlebars.registerHelper("created", function() {
 
 var Twitter = {
     init: function(config) {
-        this.url = 'https://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&include_rts=true&screen_name=' + config.username + '&count=' + config.count + '&callback=?'
+        this.url = './tweets.php?username=' + config.username + '&count=' + config.count + '&api=statuses_userTimeline'
 		this.template = config.template;
         this.container = config.container;
         this.fetch();
@@ -42,12 +42,18 @@ var Twitter = {
         
         $.getJSON(this.url, function(data) {
             self.tweets = $.map(data, function(tweet) {
-                return {
-                    author: tweet.user.screen_name,
-                    tweet: tweet.text,
-                    thumb: tweet.user.profile_image_url,
-					created: tweet.created_at
-                };
+				try {
+					if(tweet.user.screen_name){
+						return {
+							author: tweet.user.screen_name,
+							tweet: tweet.text,
+							thumb: tweet.user.profile_image_url,
+							created: tweet.created_at
+						};
+					}
+				} catch (e) {
+				//no tweets
+				}
             });
 
             self.attachTemplate();
