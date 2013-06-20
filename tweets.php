@@ -1,4 +1,6 @@
 <?
+header('Content-type: application/json');
+
 //Twitter OAuth library: https://github.com/mynetx/codebird-php
 require_once ('codebird.php');
 
@@ -26,6 +28,8 @@ $params = array(
 
 //Make the REST call:
 $data = (array) $cb->$api($params);
+
+$lastElement = array_pop($data);
 
 //Output result in JSON:
 echo json_encode($data);
