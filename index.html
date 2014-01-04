@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div id="container"></div>
+<div id="container"><img class="loading" src="img/loading.gif" alt="Loading"></div>
 
 <script id="tweets-template" type="text/x-handlebars-template">
     {{#each this}}
@@ -20,8 +20,16 @@
     {{/each}}
 </script>
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.min.js"></script>
-<script type="text/javascript" src="src/tweets.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.2.1/handlebars.min.js"></script>
+<script type="text/javascript" src="src/tweets.min.js"></script>
+<script type="text/javascript">
+    Twitter.init({
+        template: $('#tweets-template').html(),
+        container: $('#container'),
+        username: 'pinceladasdaweb',
+        count: 10
+    });
+</script>
 </body>
 </html>
