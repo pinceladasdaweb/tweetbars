@@ -1,6 +1,6 @@
 /*
 +----------------------------------------------------------------+
-	Reset CSS					
+	Reset CSS
 +----------------------------------------------------------------+
 */
 body,div,dl,dt,dd,ul,ol,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,textarea,p,blockquote,th,td,address {margin:0; padding:0}
@@ -10,7 +10,7 @@ a {color:#F05D94; margin:0; padding:0; text-decoration:none}
 
 /*
 +----------------------------------------------------------------+
-	Extras														
+	Extras
 +----------------------------------------------------------------+
 */
 .alignleft {float:left}
@@ -22,21 +22,22 @@ a {color:#F05D94; margin:0; padding:0; text-decoration:none}
 
 /*
 +----------------------------------------------------------------+
-	Definicoes Gerais														
+	Definicoes Gerais
 +----------------------------------------------------------------+
 */
 body {background:#e3e3e3 url(../img/background.png) no-repeat center top; font:62.5% Georgia, "Times New Roman", Times, serif}
 
 /*
 +----------------------------------------------------------------+
-	Container														
+	Container
 +----------------------------------------------------------------+
 */
 #container {margin:30px auto; width:377px}
+.loading {display: block; margin: 0 auto;}
 
 /*
 +----------------------------------------------------------------+
-	Tweets														
+	Tweets
 +----------------------------------------------------------------+
 */
 .item {background:url(../img/bg-tweets.png) no-repeat; height:156px; margin-bottom:15px; padding:40px 30px 0; position:relative}
