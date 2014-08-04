@@ -29,6 +29,7 @@ class Tweets {
         $data = (array) $cb->statuses_userTimeline($params);
 
         unset($data['httpstatus']);
+        unset($data['rate']);
 
         // Output result in JSON:
         return json_encode($data);
