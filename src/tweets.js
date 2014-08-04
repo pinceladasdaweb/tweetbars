@@ -1,6 +1,6 @@
 /*!
 *
-* Tweetbars 1.1.0
+* Tweetbars 1.2.0
 * Copyright 2014, Pedro Rogerio
 * Licensed under the WTFPL licenses (http://www.wtfpl.net/).
 *
