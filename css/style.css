@@ -33,7 +33,7 @@ body {background:#e3e3e3 url(../img/background.png) no-repeat center top; font:6
 +----------------------------------------------------------------+
 */
 #container {margin:30px auto; width:377px}
-.loading {display: block; margin: 0 auto;}
+.loading {left: 50%; position: absolute; top: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%)}
 
 /*
 +----------------------------------------------------------------+
