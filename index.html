@@ -7,24 +7,24 @@
 </head>
 <body>
 
-<div id="container"><img class="loading" src="img/loading.gif" alt="Loading"></div>
+<div id="container"><img class="loading" src="img/loading-spin.svg" alt="Loading"></div>
 
 <script id="tweets-template" type="text/x-handlebars-template">
     {{#each this}}
     <div class="item clearfix">
         <img src="{{thumb}}" alt="{{author}}">
-        <p>{{tweet}}</p>
-		<p>{{created}}</p>
+        <p>{{linkify tweet}}</p>
+		<p>{{prettyDate created}}</p>
 		<cite>@{{author}}</cite>
     </div>
     {{/each}}
 </script>
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.2.1/handlebars.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
 <script type="text/javascript" src="src/tweets.min.js"></script>
 <script type="text/javascript">
-    Twitter.init({
+    Tweetbars.init({
         template: $('#tweets-template').html(),
         container: $('#container'),
         username: 'pinceladasdaweb',
