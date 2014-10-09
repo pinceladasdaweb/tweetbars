@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Tweetbars - Display Tweets with jQuery + Handlebars Template</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tweetbars - Display Tweets with jQuery + Handlebars Template</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -14,8 +14,8 @@
     <div class="item clearfix">
         <img src="{{thumb}}" alt="{{author}}">
         <p>{{linkify tweet}}</p>
-		<p>{{prettyDate created}}</p>
-		<cite>@{{author}}</cite>
+        <p>{{prettyDate created}}</p>
+        <cite>@{{author}}</cite>
     </div>
     {{/each}}
 </script>
@@ -27,7 +27,7 @@
     Tweetbars.init({
         template: $('#tweets-template').html(),
         container: $('#container'),
-        username: 'pinceladasdaweb',
+        username: '',
         count: 10
     });
 </script>
