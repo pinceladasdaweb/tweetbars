@@ -3,11 +3,11 @@ module.exports = function (grunt) {
     grunt.initConfig({
         uglify: {
             options: {
-                preserveComments: 'all'
+                banner: '/* Minified JavaScript of Tweetbars version:2.0.0 */\n'
             },
             target: {
                 files: {
-                    'src/tweets.min.js': ['src/tweets.js']
+                    'src/tweets.min.js': ['src/helpers.js', 'src/tweets.js']
                 }
             }
         }
