@@ -1,9 +1,15 @@
 module.exports = function (grunt) {
-    pkg: grunt.file.readJSON('package.json'),
+    "use strict";
+
+    var pkg = grunt.file.readJSON("package.json");
+
     grunt.initConfig({
+        meta: {
+          banner: '/*! '+pkg.name+' '+pkg.version+' | (c) 2014 '+pkg.author+' | '+pkg.licenses[0].type+' License */'
+        },
         uglify: {
             options: {
-                banner: '/* Minified JavaScript of Tweetbars version:2.0.0 */\n'
+                banner: '<%= meta.banner %>\n'
             },
             target: {
                 files: {
