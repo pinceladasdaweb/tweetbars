@@ -33,6 +33,23 @@ $ACCESS_TOKEN = '';
 $ACCESS_TOKEN_SECRET = '';
 ```
 
+## Customize Template
+
+1 - To customize the template open the [`index.html`](index.html) file and look for the following block of code:
+
+```javascript
+<script id="tweets-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <div class="item clearfix">
+        <img src="{{thumb}}" alt="{{author}}">
+        <p>{{linkify tweet}}</p>
+        <p>{{prettyDate created}}</p>
+        <cite>@{{author}}</cite>
+    </div>
+    {{/each}}
+</script>
+```
+
 ## Important Note
 
 It is mandatory to file [`cacert.pem`](cacert.pem) be on the same level/directory that codebird.php file because Twitter requires [secure connections in their API](https://twittercommunity.com/t/restricting-api-twitter-com-to-ssl-tls-traffic/12331).
