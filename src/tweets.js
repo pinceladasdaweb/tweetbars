@@ -1,19 +1,16 @@
-/*!
-*
-* Tweetbars 2.0.0
-* Copyright 2014, Pedro Rogerio
-* Licensed under the WTFPL licenses (http://www.wtfpl.net/).
-*
-*/
-(function (name, context, definition) {
+/*jslint browser: true*/
+/*global define, module, exports*/
+(function (root, factory) {
     if (typeof define === 'function' && define.amd) {
-        define(definition);
-    } else if (typeof module !== 'undefined' && module.exports) {
-        module.exports = definition();
+        define(function () {
+            return factory(root);
+        });
+    } else if (typeof exports === 'object') {
+        module.exports = factory;
     } else {
-        context[name] = definition();
+        root.Tweetbars = factory(root);
     }
-})('Tweetbars', this, function () {
+})(this, function () {
     "use strict";
 
     var Tweetbars = function (options) {
