@@ -1,7 +1,7 @@
 {
     "name": "Tweetbars",
     "description": "Display your latest tweets with jQuery and Handlebars.js",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "author": "Pedro Rogério",
     "homepage": "",
     "scripts": {
@@ -9,7 +9,7 @@
     },
     "devDependencies": {
         "grunt": "~0.4.5",
-        "grunt-contrib-uglify": "~0.6.0"
+        "grunt-contrib-uglify": "~0.7.0"
     },
     "keywords": [
         "twitter",
